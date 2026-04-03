@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PhysicsCheck : MonoBehaviour
 {
-
     private CapsuleCollider2D coll;
     [Header("检测参数")]
     public bool manual;
@@ -16,10 +15,11 @@ public class PhysicsCheck : MonoBehaviour
 
     [Header("状态")]
     public bool isGround;
-
     public bool touchLeftWall;
-
     public bool touchRightWall;
+
+    // 【新增】死亡开关，死亡时停止检测
+    public bool isDead;
 
     private void Awake()
     {
@@ -34,6 +34,9 @@ public class PhysicsCheck : MonoBehaviour
 
     private void Update()
     {
+        // 【关键】如果死了，直接跳过检测，isGround 保持不变
+        if (isDead) return;
+
         Check();
     }
 
@@ -46,11 +49,11 @@ public class PhysicsCheck : MonoBehaviour
         touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, checkRaduis, groundLayer);
         touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, checkRaduis, groundLayer);
     }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere((Vector2)transform.position + bottomOffset, checkRaduis);
         Gizmos.DrawWireSphere((Vector2)transform.position + leftOffset, checkRaduis);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, checkRaduis);
     }
-
 }

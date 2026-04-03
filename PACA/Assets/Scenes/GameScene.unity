@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 76828629}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2021914, y: -0.4142838, z: 0}
+  m_LocalPosition: {x: -5.2021914, y: -1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1855,6 +1855,10 @@ MonoBehaviour:
   inputDirection: {x: 0, y: 0}
   speed: 200
   jumpForce: 16.5
+  dashForce: 20
+  dashTime: 0.15
+  dashCooldown: 0.5
+  isDashing: 0
 --- !u!114 &1584297599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1878,6 +1882,7 @@ MonoBehaviour:
   isGround: 0
   touchLeftWall: 0
   touchRightWall: 0
+  isDead: 0
 --- !u!114 &1584297600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,7 +1907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5f164b08339a2419208f00627623c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnDelay: 1.5
+  isDead: 0
+  respawnDelay: 1.6
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
