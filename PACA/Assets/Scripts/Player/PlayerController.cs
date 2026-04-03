@@ -15,13 +15,12 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
 
     [Header("冲刺设置")]
-    public float dashForce = 15f;         // 冲刺力度
-    public float dashTime = 0.15f;         // 冲刺持续时间
-    public float dashCooldown = 1f;        // 冲刺冷却
-    public bool isDashing = false;        // 是否正在冲刺
-    private bool canDash = true;           // 能否冲刺
+    public float dashForce = 15f;
+    public float dashTime = 0.15f;
+    public float dashCooldown = 1f;
+    public bool isDashing = false;
+    private bool canDash = true;
 
-    // 翻转不受缩放影响
     private float baseScaleX;
     private float baseScaleY;
     private float baseScaleZ;
@@ -33,12 +32,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<CapsuleCollider2D>();
 
-        // 跳跃
         inputControl.Gameplay.Jump.started += Jump;
-        // 冲刺绑定 LeftShift
         inputControl.Gameplay.Dash.started += Dash;
 
-        // 记录初始缩放
         baseScaleX = Mathf.Abs(transform.localScale.x);
         baseScaleY = transform.localScale.y;
         baseScaleZ = transform.localScale.z;
@@ -75,10 +71,8 @@ public class PlayerController : MonoBehaviour
             Flip(true);
     }
 
-    // 冲刺逻辑
     private void Dash(InputAction.CallbackContext context)
     {
-        // 死亡、冲刺中、冷却中都不能冲
         if (isDashing || !canDash || GetComponent<PlayerRespawn>().isDead)
             return;
 
@@ -90,16 +84,24 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         canDash = false;
 
-        // 朝面朝方向冲刺
+        // 【锁定：冲刺期间停止地面检测】
+        physicsCheck.isDashing = true;
+        physicsCheck.isGround = true; // 强制地面，动画不跳变
+
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
         float dir = transform.localScale.x > 0 ? 1 : -1;
         rb.velocity = new Vector2(dir * dashForce, 0f);
 
-        // 冲刺持续时间
         yield return new WaitForSeconds(dashTime);
 
+        // 恢复
         isDashing = false;
+        rb.gravityScale = 3.5f;
 
-        // 冷却
+        // 【解锁：恢复地面检测】
+        physicsCheck.isDashing = false;
+
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
@@ -109,15 +111,14 @@ public class PlayerController : MonoBehaviour
         transform.localScale = new Vector3(
             faceLeft ? -baseScaleX : baseScaleX,
             baseScaleY,
-            baseScaleZ
-        );
+            baseScaleZ);
     }
 
     private void Jump(InputAction.CallbackContext context)
     {
         if (physicsCheck.isGround && !isDashing)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // 清除垂直速度
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
     }
