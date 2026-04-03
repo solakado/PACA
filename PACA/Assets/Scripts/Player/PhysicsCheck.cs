@@ -18,8 +18,9 @@ public class PhysicsCheck : MonoBehaviour
     public bool touchLeftWall;
     public bool touchRightWall;
 
-    // 【新增】死亡开关，死亡时停止检测
-    public bool isDead;
+    // 新增两个开关
+    public bool isDead;  // 死亡时不检测
+    public bool isDashing; // 冲刺时不检测
 
     private void Awake()
     {
@@ -34,18 +35,16 @@ public class PhysicsCheck : MonoBehaviour
 
     private void Update()
     {
-        // 【关键】如果死了，直接跳过检测，isGround 保持不变
-        if (isDead) return;
+        // 死亡 OR 冲刺 → 不检测！不会被覆盖！
+        if (isDead || isDashing)
+            return;
 
         Check();
     }
 
     public void Check()
     {
-        //检测地面
         isGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, checkRaduis, groundLayer);
-
-        //墙体判断
         touchLeftWall = Physics2D.OverlapCircle((Vector2)transform.position + leftOffset, checkRaduis, groundLayer);
         touchRightWall = Physics2D.OverlapCircle((Vector2)transform.position + rightOffset, checkRaduis, groundLayer);
     }
