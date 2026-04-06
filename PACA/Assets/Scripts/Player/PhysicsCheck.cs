@@ -21,6 +21,7 @@ public class PhysicsCheck : MonoBehaviour
     // 新增两个开关
     public bool isDead;  // 死亡时不检测
     public bool isDashing; // 冲刺时不检测
+    public bool isAttacking;//攻击时不检测
 
     private void Awake()
     {
@@ -36,7 +37,7 @@ public class PhysicsCheck : MonoBehaviour
     private void Update()
     {
         // 死亡 OR 冲刺 → 不检测！不会被覆盖！
-        if (isDead || isDashing)
+        if (isDead || isDashing||isAttacking)
             return;
 
         Check();

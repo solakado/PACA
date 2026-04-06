@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
@@ -8,6 +6,8 @@ public class PlayerAnimation : MonoBehaviour
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
     private PlayerController playerController;
+    private PlayerAttack playerAttack;
+    private PlayerRespawn playerRespawn; // 新增：获取死亡状态
 
     private void Awake()
     {
@@ -15,36 +15,23 @@ public class PlayerAnimation : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
         playerController = GetComponent<PlayerController>();
+        playerAttack = GetComponent<PlayerAttack>();
+        playerRespawn = GetComponent<PlayerRespawn>(); // 新增：初始化
     }
 
     private void Update()
     {
+       
         SetAnimation();
     }
 
     public void SetAnimation()
     {
-       
+
         anim.SetFloat("velocityX", Mathf.Abs(rb.velocity.x));
         anim.SetFloat("velocityY", rb.velocity.y);
         anim.SetBool("isGround", physicsCheck.isGround);
         anim.SetBool("isDashing", playerController.isDashing);
-
-        // ===================== 冲刺动画自动同步 =====================
-
-
-        // 你原来的注释，可以自己打开
-        //anim.SetBool("isDead", playerController.isDead);
-        //anim.SetBool("isAttack", playerController.isAttack);
+      
     }
-
-    //public void PlayHurt()
-    //{
-    //    anim.SetTrigger("hurt");
-    //}
-
-    //public void PlayAttack()
-    //{
-    //    anim.SetTrigger("attack");
-    //}
 }

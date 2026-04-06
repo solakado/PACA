@@ -55,6 +55,8 @@ public class PlayerRespawn : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
         }
+        if (GetComponent<PlayerAttack>() != null)
+            GetComponent<PlayerAttack>().ResetAttackState();
 
         anim.SetBool("isDead", true);
 
