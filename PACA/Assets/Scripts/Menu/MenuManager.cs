@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
     // （可选）点击“退出游戏”按钮时调用
     public void QuitGame()
     {
+        Debug.Log(111);
         Application.Quit();
     }
 }
