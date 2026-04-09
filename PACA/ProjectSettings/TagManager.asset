@@ -6,6 +6,8 @@ TagManager:
   tags:
   - trap
   - isGround
+  - Boss
+  - Attack
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

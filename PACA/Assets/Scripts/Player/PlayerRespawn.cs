@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
@@ -16,7 +14,6 @@ public class PlayerRespawn : MonoBehaviour
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
 
-
     void Start()
     {
         startPos = transform.position;
@@ -26,39 +23,40 @@ public class PlayerRespawn : MonoBehaviour
         physicsCheck = GetComponent<PhysicsCheck>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // 对外提供死亡接口（由 HurtBox 调用）
+    public void Die()
     {
-        if (other.CompareTag("trap") && !isDead)
-        {
-            Die();
-        }
-    }
+        if (isDead||playerController.isDashing) return;
 
-    void Die()
-    {
         isDead = true;
+        Debug.Log("玩家死亡");
 
-        // 【关键1：告诉 PhysicsCheck 我死了，停止检测】
+        // 停止地面检测
         if (physicsCheck != null)
         {
             physicsCheck.isDead = true;
-            physicsCheck.isGround = true; // 强制设为地面
+            physicsCheck.isGround = true;
         }
 
         // 禁用控制
         if (playerController != null)
             playerController.enabled = false;
 
-        // 锁死物理
+        // 停止攻击
+        PlayerAttack atk = GetComponent<PlayerAttack>();
+        if (atk != null)
+            atk.ResetAttackState();
+
+        // 锁物理（防止飞走/下落）
         if (rb != null)
         {
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
         }
-        if (GetComponent<PlayerAttack>() != null)
-            GetComponent<PlayerAttack>().ResetAttackState();
 
-        anim.SetBool("isDead", true);
+        // 播放死亡动画
+        if (anim != null)
+            anim.SetBool("isDead", true);
 
         Invoke(nameof(Respawn), respawnDelay);
     }
@@ -66,23 +64,29 @@ public class PlayerRespawn : MonoBehaviour
     void Respawn()
     {
         isDead = false;
+
+        // 回到出生点
         transform.position = startPos;
 
+        // 恢复物理
         if (rb != null)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.velocity = Vector2.zero;
         }
 
+        // 恢复控制
         if (playerController != null)
             playerController.enabled = true;
 
-        // 【关键2：复活时告诉 PhysicsCheck 我活了，恢复检测】
+        // 恢复地面检测
         if (physicsCheck != null)
         {
             physicsCheck.isDead = false;
         }
 
-        anim.SetBool("isDead", false);
+        // 恢复动画
+        if (anim != null)
+            anim.SetBool("isDead", false);
     }
 }
