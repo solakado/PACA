@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: 63a6db7564d21f444b466b0ba69adb88
+  - enabled: 1
+    path: Assets/Scenes/boss.unity
+    guid: 264a3979735b3bf489fee5abcf90c713
+  - enabled: 1
+    path: Assets/Scenes/bridge.unity
+    guid: 6f357ec0266558844b5effa087c2bb52
+  - enabled: 1
+    path: Assets/Scenes/bridge_battle.unity
+    guid: 6cea4fc14bf9b07479b934faa8f842d7
+  - enabled: 1
+    path: Assets/Scenes/gugong_battle.unity
+    guid: 4b694ed8071096b4e973f639f28d4f3c
+  - enabled: 1
+    path: Assets/Scenes/gugong.unity
+    guid: 61bd0ad5b0f01214f935e962973d8f86
   m_configObjects: {}
