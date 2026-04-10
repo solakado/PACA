@@ -79,6 +79,16 @@ public class BossController : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
+        MonoBehaviour[] allScripts = GetComponents<MonoBehaviour>();
+        foreach (MonoBehaviour script in allScripts)
+        {
+            // 只保留我们当前这个 BossController 脚本，其他全关
+            if (script != this)
+            {
+                script.enabled = false;
+            }
+        }
+
         rb.velocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
 

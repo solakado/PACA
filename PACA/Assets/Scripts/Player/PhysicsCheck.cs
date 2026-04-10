@@ -23,9 +23,12 @@ public class PhysicsCheck : MonoBehaviour
     public bool isDashing; // ³å´ÌÊ±²»¼ì²â
     public bool isAttacking;//¹¥»÷Ê±²»¼ì²â
 
+    private PlayerAttack playerAttack;
+
     private void Awake()
     {
         coll = GetComponent<CapsuleCollider2D>();
+        playerAttack=GetComponent<PlayerAttack>();
 
         if (!manual)
         {
@@ -41,6 +44,10 @@ public class PhysicsCheck : MonoBehaviour
             return;
 
         Check();
+        if(isGround==true)
+        {
+            playerAttack.constrain = 0;
+        }
     }
 
     public void Check()

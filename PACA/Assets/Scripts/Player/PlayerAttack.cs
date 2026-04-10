@@ -7,6 +7,8 @@ public class PlayerAttack : MonoBehaviour
     public bool isAttacking = false;
     private bool attackQueued = false;
 
+    public int constrain = 1;
+
     private Animator anim;
     private PlayerController controller;
     private PlayerRespawn playerRespawn;
@@ -70,6 +72,10 @@ public class PlayerAttack : MonoBehaviour
 
     void StartAttack(int num)
     {
+        if (constrain>=2)
+        {
+            return;
+        }
         combo = num;
         isAttacking = true;
         attackQueued = false;
@@ -84,6 +90,7 @@ public class PlayerAttack : MonoBehaviour
         physicsCheck.isGround = true;     // 强制设为地面，动画机不切跳跃
 
         anim.SetInteger("Combo", num);
+        constrain++;
     }
 
     // 动画最后一帧调用
