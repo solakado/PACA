@@ -525,6 +525,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: d8d04c6f80a1140db85ede568dab1f51, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.5833333
     functionName: EndInvincible
     data: 

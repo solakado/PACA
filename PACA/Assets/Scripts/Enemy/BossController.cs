@@ -11,12 +11,16 @@ public class BossController : MonoBehaviour
 
     private bool isInvincible = false;
     private bool isDead = false;
+    private BossFireControl fire;
 
+    [Header("游戏结束")]
+    public GameObject endGameObj; // 结束标志物预制体
     private Rigidbody2D rb;
 
     void Start()
     {
         currentHealth = maxHealth;
+        fire = GetComponent<BossFireControl>();
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -53,21 +57,46 @@ public class BossController : MonoBehaviour
     }
 
     // ================= 死亡 =================
+    //void Die()
+    //{
+    //    if (isDead) return;
+
+    //    isDead = true;
+    //    rb.velocity = Vector2.zero;
+
+    //    // 关闭物理
+    //    rb.bodyType = RigidbodyType2D.Kinematic;
+
+
+    //    anim.SetBool("isDead", true);
+
+    //    // 关闭碰撞（防止继续被打）
+    //    GetComponent<Collider2D>().enabled = false;
+
+    //}
     void Die()
     {
         if (isDead) return;
 
         isDead = true;
         rb.velocity = Vector2.zero;
-
-        // 关闭物理
-        rb.bodyType = RigidbodyType2D.Kinematic;
-
+        rb.bodyType = RigidbodyType2D.Static;
 
         anim.SetBool("isDead", true);
-
-        // 关闭碰撞（防止继续被打）
         GetComponent<Collider2D>().enabled = false;
+    }
+
+    // 这个方法会在死亡动画最后一帧调用
+    public void OnBossDeathAnimationFinish()
+    {
+        
+        // 生成结束标志物
+        if (endGameObj != null)
+        {
+
+            Instantiate(endGameObj, fire.centerPoint.position, Quaternion.identity);
+        }
+
         
     }
 

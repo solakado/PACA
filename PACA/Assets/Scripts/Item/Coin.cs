@@ -2,22 +2,21 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    // 引用 Animator 组件
     private Animator _animator;
+    private AudioSource _audioSource; // 新增：音频源引用
+    [Header("吃硬币音效")]
+    public AudioClip collectSound; //  Inspector里拖入音效文件
 
-    // 为了性能优化，我们将参数名转换为哈希值
     private static readonly int IsCollected = Animator.StringToHash("IsCollected");
 
     void Awake()
     {
-        // 获取当前物体上的 Animator 组件
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>(); // 新增：获取组件
     }
 
-    // 2D 触发检测（如果是3D游戏，请改为 OnTriggerEnter)
     void OnTriggerEnter2D(Collider2D other)
     {
-        // 检查碰撞的物体是否是玩家（建议给玩家物体设置 Tag 为 "Player"）
         if (other.CompareTag("Player"))
         {
             CollectCoin();
@@ -26,16 +25,15 @@ public class Coin : MonoBehaviour
 
     void CollectCoin()
     {
-        // 1. 告诉动画机播放消失动画
-        _animator.SetBool(IsCollected, true);
+        // 1. 播放吃硬币音效（核心！）
+        _audioSource.PlayOneShot(collectSound);
 
-        // 注意：不要在这里直接 Destroy(gameObject)，否则动画还没播物体就没了
+        // 2. 切换消失动画
+        _animator.SetBool(IsCollected, true);
     }
 
-    // 【关键】这个方法将由“动画事件”调用
     public void OnDisappearAnimationFinish()
     {
-        // 销毁硬币物体
         Destroy(gameObject);
     }
 }

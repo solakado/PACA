@@ -18,13 +18,5 @@ public class LevelFinish : MonoBehaviour
         }
     }
 
-    // 3D游戏请用这个方法，注释上面的2D方法
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (other.CompareTag("Player"))
-    //     {
-    //         Time.timeScale = 1;
-    //         SceneManager.LoadScene(2);
-    //     }
-    // }
+    
 }

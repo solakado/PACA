@@ -13,6 +13,7 @@ public class PlayerRespawn : MonoBehaviour
     private PlayerController playerController;
     private Rigidbody2D rb;
     private PhysicsCheck physicsCheck;
+    private SpriteRenderer sr; // 新增：渲染器引用
 
     void Start()
     {
@@ -21,40 +22,35 @@ public class PlayerRespawn : MonoBehaviour
         playerController = GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         physicsCheck = GetComponent<PhysicsCheck>();
+        sr = GetComponent<SpriteRenderer>(); // 新增：获取渲染器
     }
 
-    // 对外提供死亡接口（由 HurtBox 调用）
     public void Die()
     {
-        if (isDead||playerController.isDashing) return;
+        if (isDead || playerController.isDashing) return;
 
         isDead = true;
         Debug.Log("玩家死亡");
 
-        // 停止地面检测
         if (physicsCheck != null)
         {
             physicsCheck.isDead = true;
             physicsCheck.isGround = true;
         }
 
-        // 禁用控制
         if (playerController != null)
             playerController.enabled = false;
 
-        // 停止攻击
         PlayerAttack atk = GetComponent<PlayerAttack>();
         if (atk != null)
             atk.ResetAttackState();
 
-        // 锁物理（防止飞走/下落）
         if (rb != null)
         {
             rb.velocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
         }
 
-        // 播放死亡动画
         if (anim != null)
             anim.SetBool("isDead", true);
 
@@ -65,28 +61,36 @@ public class PlayerRespawn : MonoBehaviour
     {
         isDead = false;
 
-        // 回到出生点
+        // 1. 强制复位位置（同时设transform和rigidbody，防止卡物理）
         transform.position = startPos;
-
-        // 恢复物理
         if (rb != null)
         {
+            rb.position = startPos; // 新增：强制复位物理位置
             rb.bodyType = RigidbodyType2D.Dynamic;
             rb.velocity = Vector2.zero;
         }
 
-        // 恢复控制
+        // 2. 强制显示角色（防止渲染器被关）
+        if (sr != null)
+        {
+            sr.enabled = true;
+            sr.color = Color.white; // 新增：强制恢复颜色，防止透明
+        }
+
+        // 3. 强制重置动画（防止动画状态机卡住）
+        if (anim != null)
+        {
+            anim.Rebind(); // 新增：强制重置动画状态机
+            anim.SetBool("isDead", false);
+        }
+
         if (playerController != null)
             playerController.enabled = true;
 
-        // 恢复地面检测
         if (physicsCheck != null)
         {
             physicsCheck.isDead = false;
+            physicsCheck.isGround = false; // 新增：重置地面检测
         }
-
-        // 恢复动画
-        if (anim != null)
-            anim.SetBool("isDead", false);
     }
 }
