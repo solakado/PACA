@@ -105,7 +105,7 @@ public class NPCAIChat : MonoBehaviour
                     ChatResponse resp = JsonUtility.FromJson<ChatResponse>(www.downloadHandler.text);
                     string ans = resp.choices[0].message.content;
 
-                    ans = System.Text.RegularExpressions.Regex.Replace(ans, @"[^\u0020-\u9FFF]", "");
+                    ans = System.Text.RegularExpressions.Regex.Replace(ans, @"[^\u0000-\uFFFF]", "");
 
                     chatText.text += "\n<color=black>Ð¡Ï¼£º</color>" + ans;
                 }
