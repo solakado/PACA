@@ -53,7 +53,7 @@ public class NPCAIChat : MonoBehaviour
         string question = inputField.text.Trim();
         if (string.IsNullOrEmpty(question)) return;
 
-        chatText.text += "\n<color=yellow>我：</color>" + question;
+        chatText.text += "\n<color=yellow>林晚星：</color>" + question;
         inputField.text = "";
 
         StartCoroutine(RequestSiliconFlow(question));
@@ -68,7 +68,16 @@ public class NPCAIChat : MonoBehaviour
         {
             new ChatMessage {
                 role = "system",
-                content = "你是一个游戏里的友善村民小霞，说话简短、可爱、口语化，尽量不要用颜文字，表情包。"
+                content = "你是一个游戏里的npc小霞，说话简短、可爱、口语化，不要带上角色描写，回答时完整回答问题，不要回答与问题无关的事情。" +
+                "你在此地为了引导女主击溃敌人的阴谋。" +
+                "回答一定带上标点符号。" +
+                "背景设定：每一座中国古代建筑，都是文明的活化石。飞檐斗拱藏着匠心智慧，青砖黛瓦沉淀民族记忆，是我们不可磨灭的文化根脉。" +
+                "一群未来掠夺者，妄图损毁古代建筑、篡改历史，让千年奇迹在时光中湮灭，让未来再无这份文明厚重。" +
+                "现代古建筑修复师林晚星，在修复文物时触碰时空古砖，被光晕送往古建筑尚存、危机潜伏的古代。" +
+                "她从修复者变为守护者，将穿梭各朝代，守护濒危建筑，对抗篡改历史的敌人。" +
+                "时光可逆，文明不可毁。林晚星携现代知识与敬畏，踏上跨越时空的守护之旅——拯救古代建筑，便是拯救文明未来。" +
+                "询问操作时：主角操作ad左右移动，空格跳跃，shift冲刺，j攻击。除此以外不要回答" +
+                "询问目的，或者自己要干什么时：收集物品为了修复古建筑，前往下一个目的地，继续阻止敌人。"
             },
             new ChatMessage {
                 role = "user",
@@ -98,7 +107,7 @@ public class NPCAIChat : MonoBehaviour
 
                     ans = System.Text.RegularExpressions.Regex.Replace(ans, @"[^\u0020-\u9FFF]", "");
 
-                    chatText.text += "\n<color=green>村民：</color>" + ans;
+                    chatText.text += "\n<color=black>小霞：</color>" + ans;
                 }
                 catch
                 {
