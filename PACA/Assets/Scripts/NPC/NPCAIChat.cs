@@ -20,7 +20,7 @@ public class NPCAIChat : MonoBehaviour
     public InputActionReference cancelAction; // ESC
 
     [Header("API")]
-    public string apiKey = "你的key";
+    public string apiKey = "sk-fzejexxbhrqfpfxggogucpqquvaulfvzrsrivdxhfwdmhzcw";
     private string apiUrl = "https://api.siliconflow.cn/v1/chat/completions";
 
     void OnEnable()
@@ -77,7 +77,7 @@ public class NPCAIChat : MonoBehaviour
                 "她从修复者变为守护者，将穿梭各朝代，守护濒危建筑，对抗篡改历史的敌人。" +
                 "时光可逆，文明不可毁。林晚星携现代知识与敬畏，踏上跨越时空的守护之旅——拯救古代建筑，便是拯救文明未来。" +
                 "询问操作时：主角操作ad左右移动，空格跳跃，shift冲刺，j攻击。除此以外不要回答" +
-                "询问目的，或者自己要干什么时：收集物品为了修复古建筑，前往下一个目的地，继续阻止敌人。"
+                "询问目的，或者自己要干什么时：收集古币为了修复古建筑，前往下一个目的地，继续阻止敌人。"
             },
             new ChatMessage {
                 role = "user",
