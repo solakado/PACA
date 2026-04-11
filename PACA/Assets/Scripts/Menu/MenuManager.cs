@@ -7,7 +7,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         // 加载索引为 1 的场景（即 GameScene）
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(8);
     }
 
     // （可选）点击“退出游戏”按钮时调用

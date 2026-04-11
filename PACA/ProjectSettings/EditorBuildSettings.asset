@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/gugong.unity
     guid: 61bd0ad5b0f01214f935e962973d8f86
+  - enabled: 1
+    path: Assets/Scenes/introduce.unity
+    guid: 857533f2b376cec41aaa1ec257d88d44
   m_configObjects: {}
