@@ -17,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     // 【新增】保存原来的重力
     private float originalGravityScale;
 
+    public bool canControl = true;
+
     private PlayerInputControl inputControl;
 
     void Awake()
@@ -125,6 +127,22 @@ public class PlayerAttack : MonoBehaviour
     public void ResetAttackState()
     {
         EndAttack();
+    }
+    public void DisableControl()
+    {
+        canControl = false;
+
+        inputControl.Disable();
+
+        // 防止滑动
+        rb.velocity = new Vector2(0, rb.velocity.y);
+    }
+
+    public void EnableControl()
+    {
+        canControl = true;
+
+        inputControl.Enable();
     }
 
 }

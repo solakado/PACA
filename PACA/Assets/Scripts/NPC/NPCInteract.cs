@@ -12,6 +12,7 @@ public class NPCInteract : MonoBehaviour
 
     [Header("Player")]
     public PlayerController playerController;
+    public PlayerAttack playerAttack;
 
     private bool playerInRange = false;
 
@@ -53,6 +54,8 @@ public class NPCInteract : MonoBehaviour
 
         if (playerController != null)
             playerController.DisableControl();
+        if (playerAttack != null)
+            playerAttack.DisableControl();
     }
 
     public void CloseChat()
@@ -97,6 +100,10 @@ public class NPCInteract : MonoBehaviour
         if (playerController != null)
         {
             playerController.EnableControl();
+        }
+        if (playerAttack != null)
+        {
+            playerAttack.EnableControl();
         }
     }
     void OnDrawGizmos()
