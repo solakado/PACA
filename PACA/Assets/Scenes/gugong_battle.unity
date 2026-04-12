@@ -5233,7 +5233,7 @@ MonoBehaviour:
   sendButton: {fileID: 9132779912409738983}
   chatText: {fileID: 1452767331469778378}
   npcInteract: {fileID: 3268820332470935959}
-  cancelAction: {fileID: -3597952228199008374, guid: 10d669f620258004fb21df23d58c2b1a, type: 3}
+  cancelAction: {fileID: 8092014811990468103, guid: 10d669f620258004fb21df23d58c2b1a, type: 3}
   apiKey: sk-fzejexxbhrqfpfxggogucpqquvaulfvzrsrivdxhfwdmhzcw
 --- !u!222 &434779752519149927
 CanvasRenderer:
