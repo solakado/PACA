@@ -3,6 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
+
+    [Header("引用")]
+    public GameObject waveProjectilePrefab;
+    public Transform waveProjectilePoint;
+
+
+
+    [Header("基本参数")]
     private int combo = 0;
     public bool isAttacking = false;
     private bool attackQueued = false;
@@ -36,12 +44,14 @@ public class PlayerAttack : MonoBehaviour
     void OnEnable()
     {
         inputControl.Gameplay.Attack.started += OnAttackInput;
+        inputControl.Gameplay.Skill.started += OnSkillInput;
         inputControl.Enable();
     }
 
     void OnDisable()
     {
         inputControl.Gameplay.Attack.started -= OnAttackInput;
+        inputControl.Gameplay.Skill.started -= OnSkillInput;
         inputControl.Disable();
     }
 
@@ -143,6 +153,53 @@ public class PlayerAttack : MonoBehaviour
         canControl = true;
 
         inputControl.Enable();
+    }
+
+    void OnSkillInput(InputAction.CallbackContext ctx)
+    {
+        if (playerRespawn.isDead) return;
+
+        if (isAttacking) return; // 防止攻击中释放技能
+
+        StartWaveAttack();
+    }
+    void StartWaveAttack()
+    {
+        isAttacking = true;
+
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+
+        physicsCheck.isAttacking = true;
+        physicsCheck.isGround = true;
+
+        // 关键：触发技能动画
+        anim.SetTrigger("Wave");
+
+    }
+    public void SpawnWaveProjectile()
+    {
+        if (waveProjectilePrefab == null || waveProjectilePoint == null)
+        {
+            Debug.LogWarning("FireballPrefab 或 FirePoint 没设置！");
+            return;
+        }
+
+        Debug.Log("发射波动弹");
+
+        GameObject fb = Instantiate(waveProjectilePrefab, waveProjectilePoint.position, Quaternion.identity);
+
+        float dir = transform.localScale.x > 0 ? 1 : -1;
+
+        fb.GetComponent<WaveProjectile>()?.Setup(new Vector2(dir, 0));
+        if (dir > 0)
+        {
+            fb.GetComponent<WaveProjectile>().sr.flipX = true;
+        }
+    }
+    public void OnWaveAnimationFinished()
+    {
+        EndAttack();
     }
 
 }
