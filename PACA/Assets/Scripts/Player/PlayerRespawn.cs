@@ -92,5 +92,10 @@ public class PlayerRespawn : MonoBehaviour
             physicsCheck.isDead = false;
             physicsCheck.isGround = false; // 新增：重置地面检测
         }
+        PlayerHealth hp = GetComponent<PlayerHealth>();
+        if (hp != null)
+        {
+            hp.ResetHealth();
+        }
     }
 }

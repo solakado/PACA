@@ -410,6 +410,7 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 0.5
   isDashing: 0
+  canControl: 1
 --- !u!114 &3271080500341121426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +475,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73b7cf7ff45fd244968d0939bdbdda0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveProjectilePrefab: {fileID: 0}
+  waveProjectilePoint: {fileID: 0}
+  waveCountText: {fileID: 0}
+  maxWaveCount: 5
+  currentWaveCount: 2
   isAttacking: 0
+  constrain: 1
+  canControl: 1
 --- !u!82 &1032785804092463488
 AudioSource:
   m_ObjectHideFlags: 0

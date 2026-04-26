@@ -7,7 +7,7 @@ public class WaveProjectile : MonoBehaviour
     [Header("波动球参数")]
     public float speed = 5f;
     public float lifetime = 3f; // 3秒后自动销毁
-
+    public int damage = 10;
     // 波动球飞行方向
     private Vector2 moveDirection;
     public SpriteRenderer sr;
@@ -31,10 +31,22 @@ public class WaveProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // 碰到玩家 或 非Boss物体时销毁波动球
+        // 碰到Boss物体时销毁波动球
         if (other.CompareTag("Boss"))
         {
+            BossController boss = other.GetComponentInParent<BossController>();
+
+            if (boss == null)
+            {
+                //Debug.LogError("没找到BossController！！");
+                return;
+            }
+
+            //Debug.Log("成功获取BossController");
+
+            boss.TakeDamage(damage);
             Destroy(gameObject);
         }
     }
+    
 }

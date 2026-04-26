@@ -6,10 +6,12 @@ public class Attack : MonoBehaviour
 
     // 防止一刀多次命中
     private bool hasHit = false;
+    public PlayerAttack playerAttack;
 
     void OnEnable()
     {
         hasHit = false; // 每次攻击开始重置
+        //playerAttack = GetComponent<PlayerAttack>();
     }
 
 
@@ -21,6 +23,7 @@ public class Attack : MonoBehaviour
         if (other.CompareTag("Boss"))
         {
             //Debug.Log("碰到: " + other.name);
+            playerAttack.AddWaveCount(1);
 
             BossController boss = other.GetComponentInParent<BossController>();
 

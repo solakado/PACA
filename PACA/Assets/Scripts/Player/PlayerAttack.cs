@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -7,8 +8,10 @@ public class PlayerAttack : MonoBehaviour
     [Header("引用")]
     public GameObject waveProjectilePrefab;
     public Transform waveProjectilePoint;
-
-
+    public TextMeshProUGUI waveCountText;
+    [Header("波动弹次数")]
+    public int maxWaveCount = 5;
+    public int currentWaveCount = 2;
 
     [Header("基本参数")]
     private int combo = 0;
@@ -54,7 +57,10 @@ public class PlayerAttack : MonoBehaviour
         inputControl.Gameplay.Skill.started -= OnSkillInput;
         inputControl.Disable();
     }
-
+    void start()
+    {
+        UpdateWaveUI();
+    }
     void Update()
     {
         if (playerRespawn.isDead)
@@ -160,6 +166,11 @@ public class PlayerAttack : MonoBehaviour
         if (playerRespawn.isDead) return;
 
         if (isAttacking) return; // 防止攻击中释放技能
+        if (currentWaveCount <= 0) return;
+
+        currentWaveCount--;
+        UpdateWaveUI();
+
 
         StartWaveAttack();
     }
@@ -181,7 +192,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if (waveProjectilePrefab == null || waveProjectilePoint == null)
         {
-            Debug.LogWarning("FireballPrefab 或 FirePoint 没设置！");
             return;
         }
 
@@ -201,5 +211,21 @@ public class PlayerAttack : MonoBehaviour
     {
         EndAttack();
     }
+
+    public void AddWaveCount(int amount)
+    {
+        currentWaveCount += amount;
+        currentWaveCount = Mathf.Clamp(currentWaveCount, 0, maxWaveCount);
+
+        UpdateWaveUI(); // 每次变化就刷新UI
+    }
+    void UpdateWaveUI()
+{
+    if (waveCountText != null)
+    {
+        waveCountText.text = currentWaveCount.ToString();
+    }
+}
+
 
 }
