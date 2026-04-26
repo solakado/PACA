@@ -10,8 +10,8 @@ public class PlayerAttack : MonoBehaviour
     public Transform waveProjectilePoint;
     public TextMeshProUGUI waveCountText;
     [Header("波动弹次数")]
-    public int maxWaveCount = 5;
-    public int currentWaveCount = 2;
+    public int maxWaveCount = 3;
+    public int currentWaveCount = 0;
 
     [Header("基本参数")]
     private int combo = 0;
@@ -57,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
         inputControl.Gameplay.Skill.started -= OnSkillInput;
         inputControl.Disable();
     }
-    void start()
+    void Start()
     {
         UpdateWaveUI();
     }

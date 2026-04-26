@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public Action<int, int> onHealthChanged; // (当前血量, 最大血量)
     private HealthUI healthUI;
-    private bool isInvincible = false;
+    public bool isInvincible = false;
     public float invincibleTime = 1f;
     private PlayerRespawn respawn;
     private FlashController flash;

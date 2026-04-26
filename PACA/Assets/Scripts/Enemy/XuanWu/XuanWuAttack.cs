@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class XuanwuBossControl : MonoBehaviour
+public class XuanWuAttack : MonoBehaviour
 {
     [Header("玩家")]
     public Transform player;
@@ -20,14 +20,19 @@ public class XuanwuBossControl : MonoBehaviour
     public float waterCooldown = 2f;
 
     [Header("引用")]
-    public Animator anim;
+    private Animator anim;
     public GameObject waterballPrefab;
-    public Transform firePoint;
-
+    public Transform waterPoint;
+    private XuanWuController xuanWuController;
     private float waterTimer;
 
     private bool isDefending; // 核心状态
 
+    void Start()
+    {
+        anim= GetComponent<Animator>();
+        xuanWuController= GetComponent<XuanWuController>();
+    }
     void Update()
     {
         if (player == null || centerPoint == null) return;
@@ -50,7 +55,7 @@ public class XuanwuBossControl : MonoBehaviour
         }
 
         // ================== 2. 远程攻击 ==================
-        if (distance > attackDistance)
+        if (distance <= attackDistance)
         {
             anim.SetBool("isRun", false);
 
@@ -63,16 +68,19 @@ public class XuanwuBossControl : MonoBehaviour
             return;
         }
 
+
         // ================== 3. 追击 ==================
         if (distance <= chaseDistance)
         {
             anim.SetBool("isRun", true);
             MoveToPlayer();
         }
-        else
-        {
-            anim.SetBool("isRun", false);
-        }
+        //else
+        //{
+        //    // 超出范围也慢慢靠近（你也可以改成站着）
+        //    anim.SetBool("isRun", true);
+        //    MoveToPlayer();
+        //}
     }
 
     // ================== 缩壳 ==================
@@ -84,7 +92,8 @@ public class XuanwuBossControl : MonoBehaviour
         anim.SetBool("isDefending", true);
 
         // 这里可以加无敌
-        // GetComponent<Collider2D>().enabled = false;
+        xuanWuController.isInvincible = true;
+        //GetComponent<Collider2D>().enabled = false;
     }
 
     void ExitDefend()
@@ -94,7 +103,8 @@ public class XuanwuBossControl : MonoBehaviour
         isDefending = false;
         anim.SetBool("isDefending", false);
 
-        // GetComponent<Collider2D>().enabled = true;
+        xuanWuController.isInvincible = false;
+        //GetComponent<Collider2D>().enabled = true;
     }
 
     // ================== 面向 ==================
@@ -111,6 +121,14 @@ public class XuanwuBossControl : MonoBehaviour
     }
 
     // ================== 移动 ==================
+    //void MoveToPlayer()
+    //{
+    //    if (player == null && !isRun) return;
+
+    //    Vector2 direction = (player.position - transform.position).normalized;
+
+    //    transform.Translate(direction * moveSpeed * Time.deltaTime);
+    //}
     void MoveToPlayer()
     {
         Vector2 dir = (player.position - transform.position).normalized;
@@ -120,11 +138,15 @@ public class XuanwuBossControl : MonoBehaviour
     // ================== 动画事件 ==================
     public void SpawnWaterball()
     {
-        GameObject wb = Instantiate(waterballPrefab, firePoint.position, Quaternion.identity);
+        GameObject wb = Instantiate(waterballPrefab, waterPoint.position, Quaternion.identity);
 
         float dir = transform.localScale.x > 0 ? -1 : 1;
 
-        wb.GetComponent<WaveProjectile>()?.Setup(new Vector2(dir, 0));
+        wb.GetComponent<WaterBall>()?.Setup(new Vector2(dir, 0));
+        if (dir > 0)
+        {
+            wb.GetComponent<WaterBall>().sr.flipX = true;
+        }
     }
 
     // ================== Gizmos ==================

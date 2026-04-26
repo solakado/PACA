@@ -22,20 +22,23 @@ public class Attack : MonoBehaviour
 
         if (other.CompareTag("Boss"))
         {
-            //Debug.Log("碰到: " + other.name);
+            Debug.Log("碰到: " + other.name);
+            //
             playerAttack.AddWaveCount(1);
 
             BossController boss = other.GetComponentInParent<BossController>();
+            XuanWuController xuanwu = other.GetComponentInParent<XuanWuController>();
 
-            if (boss == null)
+            if (boss !=null)
             {
-                //Debug.LogError("没找到BossController！！");
-                return;
+                boss.TakeDamage(damage);
+            }
+            if (xuanwu!=null)
+            {
+                xuanwu.TakeDamage(damage);
             }
 
             //Debug.Log("成功获取BossController");
-
-            boss.TakeDamage(damage);
             hasHit = true;
         }
         //if (hasHit) return;
