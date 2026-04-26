@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EndGame.unity
     guid: 63a6db7564d21f444b466b0ba69adb88
   - enabled: 1
-    path: Assets/Scenes/boss.unity
+    path: Assets/Scenes/boss_qilin.unity
     guid: 264a3979735b3bf489fee5abcf90c713
   - enabled: 1
     path: Assets/Scenes/bridge.unity
