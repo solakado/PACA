@@ -1,8 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerAttack : MonoBehaviour
 {
+
+    [Header("引用")]
+    public GameObject waveProjectilePrefab;
+    public Transform waveProjectilePoint;
+    public TextMeshProUGUI waveCountText;
+    [Header("波动弹次数")]
+    public int maxWaveCount = 5;
+    public int currentWaveCount = 2;
+
+    [Header("基本参数")]
     private int combo = 0;
     public bool isAttacking = false;
     private bool attackQueued = false;
@@ -36,15 +47,20 @@ public class PlayerAttack : MonoBehaviour
     void OnEnable()
     {
         inputControl.Gameplay.Attack.started += OnAttackInput;
+        inputControl.Gameplay.Skill.started += OnSkillInput;
         inputControl.Enable();
     }
 
     void OnDisable()
     {
         inputControl.Gameplay.Attack.started -= OnAttackInput;
+        inputControl.Gameplay.Skill.started -= OnSkillInput;
         inputControl.Disable();
     }
-
+    void start()
+    {
+        UpdateWaveUI();
+    }
     void Update()
     {
         if (playerRespawn.isDead)
@@ -144,5 +160,72 @@ public class PlayerAttack : MonoBehaviour
 
         inputControl.Enable();
     }
+
+    void OnSkillInput(InputAction.CallbackContext ctx)
+    {
+        if (playerRespawn.isDead) return;
+
+        if (isAttacking) return; // 防止攻击中释放技能
+        if (currentWaveCount <= 0) return;
+
+        currentWaveCount--;
+        UpdateWaveUI();
+
+
+        StartWaveAttack();
+    }
+    void StartWaveAttack()
+    {
+        isAttacking = true;
+
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+
+        physicsCheck.isAttacking = true;
+        physicsCheck.isGround = true;
+
+        // 关键：触发技能动画
+        anim.SetTrigger("Wave");
+
+    }
+    public void SpawnWaveProjectile()
+    {
+        if (waveProjectilePrefab == null || waveProjectilePoint == null)
+        {
+            return;
+        }
+
+        Debug.Log("发射波动弹");
+
+        GameObject fb = Instantiate(waveProjectilePrefab, waveProjectilePoint.position, Quaternion.identity);
+
+        float dir = transform.localScale.x > 0 ? 1 : -1;
+
+        fb.GetComponent<WaveProjectile>()?.Setup(new Vector2(dir, 0));
+        if (dir > 0)
+        {
+            fb.GetComponent<WaveProjectile>().sr.flipX = true;
+        }
+    }
+    public void OnWaveAnimationFinished()
+    {
+        EndAttack();
+    }
+
+    public void AddWaveCount(int amount)
+    {
+        currentWaveCount += amount;
+        currentWaveCount = Mathf.Clamp(currentWaveCount, 0, maxWaveCount);
+
+        UpdateWaveUI(); // 每次变化就刷新UI
+    }
+    void UpdateWaveUI()
+{
+    if (waveCountText != null)
+    {
+        waveCountText.text = currentWaveCount.ToString();
+    }
+}
+
 
 }

@@ -23,7 +23,10 @@ public class BossFireControl : MonoBehaviour
     [Header("引用")]
     public Animator anim;
     public GameObject fireballPrefab;
+    public GameObject smashPrefab;
+
     public Transform firePoint;
+    public Transform smashPoint;
 
     private float attackTimer;
     private bool isAttacking;
@@ -115,7 +118,12 @@ public class BossFireControl : MonoBehaviour
 
 
     // ================= 动画事件调用 =================
+    public void SpawnSmashHitBox()
+    {
+        GameObject sp = Instantiate(smashPrefab, smashPoint.position, Quaternion.identity);
+        Destroy(sp, 0.2f);
 
+    }
 
     public void SpawnFireball()
     {
