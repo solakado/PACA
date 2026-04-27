@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelFinish2: MonoBehaviour
+public class LevelFinish3: MonoBehaviour
 {
     // 玩家触碰终点触发器时调用
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,7 +14,7 @@ public class LevelFinish2: MonoBehaviour
             // 关键：恢复游戏时间（避免之前暂停过，导致场景异常）
             Time.timeScale = 1;
             // 加载索引2的EndGame通关场景
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene(7);
         }
     }
 
