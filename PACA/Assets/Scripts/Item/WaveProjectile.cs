@@ -36,6 +36,7 @@ public class WaveProjectile : MonoBehaviour
         {
             BossController boss = other.GetComponentInParent<BossController>();
             XuanWuController xuanwu = other.GetComponentInParent<XuanWuController>();
+            ZhuQueController zhuque = other.GetComponentInParent<ZhuQueController>();
 
             if (boss != null)
             {
@@ -44,6 +45,10 @@ public class WaveProjectile : MonoBehaviour
             if (xuanwu != null)
             {
                 xuanwu.TakeDamage(damage);
+            }
+            if (zhuque != null)
+            {
+                zhuque.TakeDamage(damage);
             }
 
             Destroy(gameObject);

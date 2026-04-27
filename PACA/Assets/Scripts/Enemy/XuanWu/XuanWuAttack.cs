@@ -75,12 +75,11 @@ public class XuanWuAttack : MonoBehaviour
             anim.SetBool("isRun", true);
             MoveToPlayer();
         }
-        //else
-        //{
-        //    // 超出范围也慢慢靠近（你也可以改成站着）
-        //    anim.SetBool("isRun", true);
-        //    MoveToPlayer();
-        //}
+        if (distance >= chaseDistance)
+        {
+            anim.SetBool("isRun", false);
+        }
+        
     }
 
     // ================== 缩壳 ==================

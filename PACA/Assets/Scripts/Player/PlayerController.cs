@@ -15,6 +15,15 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
 
+    //public float maxHoldTime = 0.25f;     // 最长按住时间
+    //public float holdForce = 20f;         // 按住时的补充上升力
+    //public float jumpCutMultiplier = 0.5f; // 松手削弱力度
+
+    //private float holdCounter;
+    //private bool isHoldingJump;
+    //private float jumpBuffer = 0.1f;
+    //private float bufferCounter;
+
     [Header("冲刺设置")]
     public float dashForce = 15f;
     public float dashTime = 0.15f;
@@ -58,7 +67,25 @@ public class PlayerController : MonoBehaviour
     {
         health = GetComponent<PlayerHealth>();
     }
+    //private void Update()
+    //{
+    //    inputDirection = inputControl.Gameplay.Move.ReadValue<Vector2>();
 
+    //    if (inputControl.Gameplay.Jump.triggered)
+    //    {
+    //        bufferCounter = jumpBuffer;
+    //    }
+
+    //    bufferCounter -= Time.deltaTime;
+
+    //    if (bufferCounter > 0 && physicsCheck.isGround && !isDashing)
+    //    {
+    //        DoJump();
+    //        bufferCounter = 0;
+    //    }
+
+    //    HandleJumpHold();
+    //}
     private void Update()
     {
         if (!canControl)
@@ -80,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
     public void Move()
     {
-        // 修复：不要乘 deltaTime
+        
         rb.velocity = new Vector2(inputDirection.x * speed*Time.deltaTime, rb.velocity.y);
 
         if (inputDirection.x > 0.01f)
@@ -89,6 +116,25 @@ public class PlayerController : MonoBehaviour
             Flip(true);
     }
 
+    //private void HandleJumpHold()
+    //{
+    //    if (isHoldingJump)
+    //    {
+    //        if (holdCounter > 0)
+    //        {
+    //            rb.velocity += Vector2.up * holdForce * Time.deltaTime;
+    //            holdCounter -= Time.deltaTime;
+    //        }
+    //        else
+    //        {
+    //            isHoldingJump = false;
+    //        }
+    //    }
+    //    if (rb.velocity.y > jumpForce * 1.5f)
+    //    {
+    //        rb.velocity = new Vector2(rb.velocity.x, jumpForce * 1.5f);
+    //    }
+    //}
     private void Dash(InputAction.CallbackContext context)
     {
         if (!canControl) return;
@@ -143,6 +189,41 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
         }
     }
+
+    //private void Jump(InputAction.CallbackContext context)
+    //{
+    //    if (!canControl) return;
+
+    //    if (context.started)
+    //    {
+    //        if (physicsCheck.isGround && !isDashing)
+    //        {
+    //            rb.velocity = new Vector2(rb.velocity.x, 0);
+    //            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+    //            isHoldingJump = true;
+    //            holdCounter = maxHoldTime;
+    //        }
+    //    }
+
+    //    if (context.canceled)
+    //    {
+    //        isHoldingJump = false;
+
+    //        if (rb.velocity.y > 0)
+    //        {
+    //            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpCutMultiplier);
+    //        }
+    //    }
+    //}
+    //void DoJump()
+    //{
+    //    rb.velocity = new Vector2(rb.velocity.x, 0);
+    //    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+    //    isHoldingJump = true;
+    //    holdCounter = maxHoldTime;
+    //}
 
     // ================= 控制接口 =================
 
