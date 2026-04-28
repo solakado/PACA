@@ -102,4 +102,8 @@ public class PlayerRespawn : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }
