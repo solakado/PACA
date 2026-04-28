@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: BaiHuDead_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d179b2a4240b17f4894a31430fd6f2e2
+      internalID: 1604475467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682f0daca9186354d9e5c4e44e86e4a9
+      internalID: -97776543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74db0836fc28634896e18b7b31847cb
+      internalID: -289660354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bee892363646724aa29440ce9350d64
+      internalID: 1875790311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ca9066168205f49ba833d3b1f08758
+      internalID: 1353249828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d23adb75b88f1489d37e911baff4de
+      internalID: 1256121317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a07741eeffd8f459c01c1952716b93
+      internalID: 73778133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffe6eb88a9d743439b944dfe51bdf42
+      internalID: -177455168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154972f7a6fe6c047b4bbb691074144f
+      internalID: -229435507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf69fa074cf8364abc663981c649033
+      internalID: -266802822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e5259462d24d34bb6a9c2db8cf683c
+      internalID: -1413838543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_11
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 720
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81682f136652265408dccfee94132d2e
+      internalID: 617912263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b747df6fde67a61488ceea275cdc89ef
+      internalID: -1087728641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6adf4604b96b86640a0c73ca0d95d2aa
+      internalID: 623513933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BaiHuDead_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 720
+        height: 720
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27a421b703489d64091626c3e06f3221
+      internalID: 789701300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +421,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BaiHuDead_0: 1604475467
+      BaiHuDead_1: -97776543
+      BaiHuDead_10: -1413838543
+      BaiHuDead_11: 617912263
+      BaiHuDead_12: -1087728641
+      BaiHuDead_13: 623513933
+      BaiHuDead_14: 789701300
+      BaiHuDead_2: -289660354
+      BaiHuDead_3: 1875790311
+      BaiHuDead_4: 1353249828
+      BaiHuDead_5: 1256121317
+      BaiHuDead_6: 73778133
+      BaiHuDead_7: -177455168
+      BaiHuDead_8: -229435507
+      BaiHuDead_9: -266802822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
