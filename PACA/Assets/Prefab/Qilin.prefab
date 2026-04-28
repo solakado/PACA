@@ -79,6 +79,7 @@ GameObject:
   - component: {fileID: 6007732450533102446}
   - component: {fileID: 2350825671600423594}
   - component: {fileID: 4972246972565023487}
+  - component: {fileID: 1114921318400087885}
   m_Layer: 0
   m_Name: Qilin
   m_TagString: Boss
@@ -124,7 +125,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c84bb105a41bc7649a987c78b6b4df0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,9 +262,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c580f4452be1a8d48843f62e7e6a826e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 40
   currentHealth: 0
   anim: {fileID: 3901973469046287128}
+  invincibleTime: 0.5
+  hurtClip: {fileID: 8300000, guid: 42f81cbac3abde84aa1bc79762c87908, type: 3}
   endGameObj: {fileID: 230728476781892717, guid: cef783c73f48376478cd6e60adf99592, type: 3}
 --- !u!114 &6007732450533102446
 MonoBehaviour:
@@ -283,7 +286,7 @@ MonoBehaviour:
   attackDistance: 6
   fireDistance: 12.5
   moveSpeed: 2
-  fireCooldown: 3
+  fireCooldown: 1
   attackCooldown: 1
   anim: {fileID: 3901973469046287128}
   fireballPrefab: {fileID: 3239419172511473513, guid: 3c6fc62bb4d75e641aea70513809aca1, type: 3}
@@ -401,6 +404,19 @@ MonoBehaviour:
   walkSound: {fileID: 0}
   jumpSound: {fileID: 0}
   attackSound: {fileID: 0}
+  hurtClip: {fileID: 0}
+--- !u!114 &1114921318400087885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4550387141564140302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbf69d75cadf1f428f45ed0a5efa02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5722798012734982903
 GameObject:
   m_ObjectHideFlags: 0
