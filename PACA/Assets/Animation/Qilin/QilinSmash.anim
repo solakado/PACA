@@ -22,46 +22,46 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: 1539590568, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.06666667
+    - time: 0.05
       value: {fileID: 2033412628, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.13333334
+    - time: 0.1
       value: {fileID: 1000067252, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.2
+    - time: 0.15
       value: {fileID: -474070826, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.26666668
+    - time: 0.2
       value: {fileID: -2046048805, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.33333334
+    - time: 0.25
       value: {fileID: -1309776018, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.4
+    - time: 0.3
       value: {fileID: -1059078337, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.46666667
+    - time: 0.35
       value: {fileID: 1998727920, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.53333336
+    - time: 0.4
       value: {fileID: 994690754, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.6
+    - time: 0.45
       value: {fileID: 1932452906, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.6666667
+    - time: 0.5
       value: {fileID: 1519512866, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.73333335
+    - time: 0.55
       value: {fileID: -1390811948, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.8
+    - time: 0.6
       value: {fileID: -1784026213, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.8666667
+    - time: 0.65
       value: {fileID: 573334325, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 0.93333334
+    - time: 0.7
       value: {fileID: -420533129, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 1
+    - time: 0.75
       value: {fileID: 1342577746, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 1.0666667
+    - time: 0.8
       value: {fileID: -1887091168, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
-    - time: 1.1333333
+    - time: 0.85
       value: {fileID: -586801235, guid: be9be7203aa46bb4c95c99500a9d2ccd, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 15
+  m_SampleRate: 20
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -101,7 +101,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.2
+    m_StopTime: 0.90000004
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -121,15 +121,22 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.53333336
+  - time: 0.4
     functionName: PlaySound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 7bef0064f8567430cac22499c6b93d4f, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.6
+  - time: 0.45
     functionName: SpawnSmashHitBox
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.85
+    functionName: EndAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

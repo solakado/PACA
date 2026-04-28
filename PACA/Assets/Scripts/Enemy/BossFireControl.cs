@@ -37,6 +37,11 @@ public class BossFireControl : MonoBehaviour
     void Update()
     {
         if (player == null || centerPoint == null) return;
+        if (isAttacking)
+        {
+            anim.SetBool("isRun", false);
+            return;
+        }
 
         // 用中心点计算距离（核心修复）
         float distance = Vector2.Distance(centerPoint.position, player.position);
@@ -55,6 +60,7 @@ public class BossFireControl : MonoBehaviour
             isRun = false;
             if (fireTimer <= 0)
             {
+                isAttacking = true;
                 anim.SetTrigger("FireTrigger");
                 fireTimer = fireCooldown;
 
@@ -67,6 +73,7 @@ public class BossFireControl : MonoBehaviour
 
             if (attackTimer <= 0 )
             {
+                isAttacking = true;
                 anim.SetTrigger("SmashTrigger");
                 attackTimer = attackCooldown;
          
@@ -145,6 +152,10 @@ public class BossFireControl : MonoBehaviour
         {
             fb.GetComponent<Fireball>().sr.flipX = true;    
         }
+    }
+    public void EndAttack()
+    {
+        isAttacking = false;
     }
 
     // ================= 可视化 =================

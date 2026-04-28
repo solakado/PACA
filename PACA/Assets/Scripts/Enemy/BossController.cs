@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class BossController : MonoBehaviour
 {
     [Header("血量")]
@@ -10,8 +10,10 @@ public class BossController : MonoBehaviour
     public Animator anim;
 
     private bool isInvincible = false;
+    public float invincibleTime = 0.5f;
     private bool isDead = false;
     private BossFireControl fire;
+    private FlashController flash;
 
     [Header("游戏结束")]
     public GameObject endGameObj; // 结束标志物预制体
@@ -22,14 +24,37 @@ public class BossController : MonoBehaviour
         currentHealth = maxHealth;
         fire = GetComponent<BossFireControl>();
         rb = GetComponent<Rigidbody2D>();
+        flash = GetComponent<FlashController>();
     }
 
     // ================= 受伤 =================
+    //public void TakeDamage(int dmg)
+    //{
+    //    if (isInvincible || isDead) return;
+
+    //    Debug.Log("Boss受到伤害: " + dmg);
+
+    //    currentHealth -= dmg;
+    //    currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+    //    if (currentHealth <= 0)
+    //    {
+    //        Die();
+    //    }
+    //    else
+    //    {
+    //        // 无敌帧开始
+    //        isInvincible = true;
+
+    //        // 播放受伤动画
+    //        anim.SetTrigger("HurtTrigger");
+    //    }
+    //}
     public void TakeDamage(int dmg)
     {
         if (isInvincible || isDead) return;
 
-        Debug.Log("Boss受到伤害: " + dmg);
+        //Debug.Log("麒麟受到伤害: " + dmg);
 
         currentHealth -= dmg;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
@@ -41,10 +66,8 @@ public class BossController : MonoBehaviour
         else
         {
             // 无敌帧开始
-            isInvincible = true;
+            StartCoroutine(InvincibleCoroutine());
 
-            // 播放受伤动画
-            anim.SetTrigger("HurtTrigger");
         }
     }
 
@@ -94,6 +117,27 @@ public class BossController : MonoBehaviour
 
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
+    }
+
+    private IEnumerator InvincibleCoroutine()
+    {
+        isInvincible = true;
+
+        float timer = 0f;
+
+        while (timer < invincibleTime)
+        {
+            if (flash != null)
+            {
+                flash.Flash(0.5f, 0.1f);
+            }
+
+            yield return new WaitForSeconds(0.2f);
+
+            timer += 0.2f;
+        }
+
+        isInvincible = false;
     }
 
     // 这个方法会在死亡动画最后一帧调用
