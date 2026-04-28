@@ -418,6 +418,8 @@ public class ZhuQueAI : MonoBehaviour
     }
     void StartDash()
     {
+        float dir = player.position.x - transform.position.x;
+        Flip(dir);
         dashTarget = player.position;
 
         dashStartPos = transform.position;
