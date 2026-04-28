@@ -14,6 +14,8 @@ public class BossController : MonoBehaviour
     private bool isDead = false;
     private BossFireControl fire;
     private FlashController flash;
+    private AudioSource audioSource;
+    public AudioClip hurtClip;
 
     [Header("游戏结束")]
     public GameObject endGameObj; // 结束标志物预制体
@@ -25,6 +27,7 @@ public class BossController : MonoBehaviour
         fire = GetComponent<BossFireControl>();
         rb = GetComponent<Rigidbody2D>();
         flash = GetComponent<FlashController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // ================= 受伤 =================
@@ -57,6 +60,8 @@ public class BossController : MonoBehaviour
         //Debug.Log("麒麟受到伤害: " + dmg);
 
         currentHealth -= dmg;
+        if (hurtClip != null)
+            audioSource.PlayOneShot(hurtClip);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         if (currentHealth <= 0)
