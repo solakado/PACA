@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7037522895563095443}
   - component: {fileID: 3543825681969760011}
   m_Layer: 0
-  m_Name: ZhuQue
+  m_Name: Zhuque
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
