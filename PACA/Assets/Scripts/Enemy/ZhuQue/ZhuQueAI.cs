@@ -58,6 +58,7 @@ public class ZhuQueAI : MonoBehaviour
 
         targetPoint = pointA;
         currentState = State.Patrol;
+        GetComponent<Rigidbody2D>().freezeRotation = true;
     }
 
     void Update()
@@ -244,14 +245,16 @@ public class ZhuQueAI : MonoBehaviour
 
         transform.position = pos;
 
-        
+
+        transform.rotation = Quaternion.identity;
+
         // 身体回正
-        transform.rotation =
-            Quaternion.Lerp(
-                transform.rotation,
-                Quaternion.identity,
-        5f * Time.deltaTime
-            );
+        //transform.rotation =
+        //    Quaternion.Lerp(
+        //        transform.rotation,
+        //        Quaternion.identity,
+        //5f * Time.deltaTime
+        //    );
         float dir = player.position.x - transform.position.x;
         Flip(dir);
 
