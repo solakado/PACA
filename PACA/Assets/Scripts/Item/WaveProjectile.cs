@@ -31,6 +31,7 @@ public class WaveProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log($"波动球碰到了：{other.name}, Tag = {other.tag}");
         // 碰到Boss物体时销毁波动球
         if (other.CompareTag("Boss"))
         {

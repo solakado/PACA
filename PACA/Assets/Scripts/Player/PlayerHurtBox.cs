@@ -18,7 +18,7 @@ public class PlayerHurtBox : MonoBehaviour
     {
         if (player == null || player.isDead) return;
 
-        Debug.Log("HurtBoxÅöµ½: " + other.name);
+        //Debug.Log("HurtBoxÅöµ½: " + other.name);
 
         // trap
         if (other.CompareTag("trap"))

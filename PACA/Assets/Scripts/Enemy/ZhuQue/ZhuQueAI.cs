@@ -18,6 +18,7 @@ public class ZhuQueAI : MonoBehaviour
     public float patrolSpeed = 2f;
     public float dashSpeed = 8f;
     public float returnSpeed = 5f;
+    public float chaseSpeed = 4f;
     [Header("俯冲")]
     public float riseHeight = 10f;
     public float waitTime = 1f;
@@ -441,7 +442,7 @@ public class ZhuQueAI : MonoBehaviour
     {
         Vector2 dir = (player.position - transform.position).normalized;
 
-        float slowSpeed = patrolSpeed * 2f; // 比巡逻稍慢一点
+        float slowSpeed = chaseSpeed; // 比巡逻稍慢一点
 
         transform.position += (Vector3)(dir * slowSpeed * Time.deltaTime);
 

@@ -17,6 +17,8 @@ public class ZhuQueController : MonoBehaviour
     private bool isDead = false;
     //private XuanWuAttack water;
     private FlashController flash;
+    private AudioSource audioSource;
+    public AudioClip hurtClip;
 
     //[Header("游戏结束")]
     //public GameObject endGameObj; // 结束标志物预制体
@@ -25,10 +27,11 @@ public class ZhuQueController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        //water = GetComponent<XuanWuAttack>();
+       
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         flash = GetComponent<FlashController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // ================= 受伤 =================
@@ -36,9 +39,11 @@ public class ZhuQueController : MonoBehaviour
     {
         if (isInvincible || isDead) return;
 
-        Debug.Log("ZhuQue受到伤害: " + dmg);
+        //Debug.Log("ZhuQue受到伤害: " + dmg);
 
         currentHealth -= dmg;
+        if (hurtClip != null)
+            audioSource.PlayOneShot(hurtClip);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         if (currentHealth <= 0)

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2630694061170883649}
   - component: {fileID: 5515627536760366949}
   - component: {fileID: -2814130085649659935}
+  - component: {fileID: 2627246870160524663}
   m_Layer: 0
   m_Name: WaveProjectile
   m_TagString: Attack
@@ -159,3 +160,30 @@ MonoBehaviour:
   lifetime: 3
   damage: 10
   sr: {fileID: 0}
+--- !u!50 &2627246870160524663
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6768138556627284579}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

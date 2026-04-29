@@ -9,7 +9,6 @@ public class BossAudio : MonoBehaviour
     public AudioClip walkSound;  // 走路音效
     public AudioClip jumpSound;  // 跳跃音效
     public AudioClip attackSound;// 攻击音效
-    public AudioClip hurtClip;
 
     private AudioSource _audio;
     private Rigidbody2D _rb;

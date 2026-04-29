@@ -17,7 +17,8 @@ public class BaiHuController : MonoBehaviour
     private bool isDead = false;
     //private XuanWuAttack water;
     private FlashController flash;
-
+    private AudioSource audioSource;
+    public AudioClip hurtClip;
     //[Header("游戏结束")]
     //public GameObject endGameObj; // 结束标志物预制体
     private Rigidbody2D rb;
@@ -29,6 +30,7 @@ public class BaiHuController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         flash = GetComponent<FlashController>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // ================= 受伤 =================
@@ -39,6 +41,8 @@ public class BaiHuController : MonoBehaviour
         Debug.Log("白虎受到伤害: " + dmg);
 
         currentHealth -= dmg;
+        if (hurtClip != null)
+            audioSource.PlayOneShot(hurtClip);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         if (currentHealth <= 0)
