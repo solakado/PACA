@@ -404,7 +404,6 @@ MonoBehaviour:
   walkSound: {fileID: 0}
   jumpSound: {fileID: 0}
   attackSound: {fileID: 0}
-  hurtClip: {fileID: 0}
 --- !u!114 &1114921318400087885
 MonoBehaviour:
   m_ObjectHideFlags: 0
