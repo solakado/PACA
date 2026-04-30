@@ -731,7 +731,7 @@ PrefabInstance:
       objectReference: {fileID: 339259900}
     - target: {fileID: 3592121833157496411, guid: 110184cc13d9ef649b632b0180035b66, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5526153178503723521, guid: 110184cc13d9ef649b632b0180035b66, type: 3}
       propertyPath: m_SortingLayer
@@ -1139,6 +1139,10 @@ PrefabInstance:
     - target: {fileID: 6692112543075477119, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8370984017860826813, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
+      propertyPath: maxHealth
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8613105681172327154, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
