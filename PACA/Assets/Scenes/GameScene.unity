@@ -3954,13 +3954,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZhuQue
       objectReference: {fileID: 0}
+    - target: {fileID: 3416731996205767579, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6224232502763163692, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.4
       objectReference: {fileID: 0}
     - target: {fileID: 6224232502763163692, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.63
+      value: 6.36
       objectReference: {fileID: 0}
     - target: {fileID: 6224232502763163692, guid: 96ee74dff28083343a600812d6d0ffe6, type: 3}
       propertyPath: m_LocalPosition.z
