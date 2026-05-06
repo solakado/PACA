@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7037522895563095443}
   - component: {fileID: 3543825681969760011}
   m_Layer: 0
-  m_Name: ZhuQue
+  m_Name: zhuque
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,10 +145,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17439461, y: 3.8027558}
+  m_Offset: {x: 0.08589268, y: 0.4397056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 7.2000003, y: 7.201758}
     newSize: {x: 7.2000003, y: 7.201758}
     adaptiveTilingThreshold: 0.5
@@ -156,7 +156,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.0606155, y: 5.512761}
+  m_Size: {x: 6.2376194, y: 6.2207685}
   m_EdgeRadius: 0
 --- !u!50 &1114296189503764804
 Rigidbody2D:
@@ -258,7 +258,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.6520252
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

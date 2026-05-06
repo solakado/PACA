@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4a66e76132a4fa74f998f2b39e8fc774
+guid: e062ca54f7524d34091dc33d5dafcae6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,421 +97,295 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZhuQueFly_0
+      name: QilinPrepare_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2880
+        y: 3840
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 891671b5ec4795a4eb150c3690f2097a
-      internalID: 177472841
+      spriteID: 77fe461a06f100343a97e2daee589954
+      internalID: 381945010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_1
+      name: QilinPrepare_1
       rect:
         serializedVersion: 2
         x: 720
-        y: 2880
+        y: 3840
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 953c4d986389b164baf255a404e27bb2
-      internalID: 1894522060
+      spriteID: cb7cbf6a10702a34088b24c117756368
+      internalID: -1324855836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_2
+      name: QilinPrepare_2
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2880
+        y: 3840
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 521bfaa41c9c62e4ea8ab058756acee7
-      internalID: -31496863
+      spriteID: 5738ff89afc314f4a9cda32866257662
+      internalID: -2017796617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_3
+      name: QilinPrepare_3
       rect:
         serializedVersion: 2
         x: 2160
-        y: 2880
+        y: 3840
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5769a67db2b269142b3c934f4ae370f0
-      internalID: 2085629700
+      spriteID: 1cf247cc99923bd4d827e2e15c61bb14
+      internalID: 930216176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_4
+      name: QilinPrepare_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 2160
+        y: 2560
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85f09f55d5647964a9a51cbefe35bdde
-      internalID: 178097872
+      spriteID: 22a0adf7fa18e2247a0a1c4d27564afc
+      internalID: -1226553396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_5
+      name: QilinPrepare_5
       rect:
         serializedVersion: 2
         x: 720
-        y: 2160
+        y: 2560
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e36dc3a66d5efd54bb9fb7f6488de6e6
-      internalID: -430677749
+      spriteID: bd973e3a96ce05f4c87cecd46ed307d1
+      internalID: -1602013012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_6
+      name: QilinPrepare_6
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2160
+        y: 2560
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1beaafef76bc1941bf451aa36398ad4
-      internalID: -888487315
+      spriteID: ec952915529c4b84ab55804a46c8c408
+      internalID: 2091707469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_7
+      name: QilinPrepare_7
       rect:
         serializedVersion: 2
         x: 2160
-        y: 2160
+        y: 2560
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e217355a572b6af4aabab6bfe8113ed9
-      internalID: -1085287673
+      spriteID: fb73fa34e4c398748a6c3d68e5d0467c
+      internalID: -473545629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_8
+      name: QilinPrepare_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 1440
+        y: 1280
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4745fb58e3beedb46b8d7b4af448a811
-      internalID: -288249829
+      spriteID: 600da09fbb94b19458af51d6aa844220
+      internalID: 1152661582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_9
+      name: QilinPrepare_9
       rect:
         serializedVersion: 2
         x: 720
-        y: 1440
+        y: 1280
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8020f771d591065429ce5531925e6ee3
-      internalID: -2082622226
+      spriteID: be81ddfda79004649afa067509db98fd
+      internalID: 707778888
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_10
+      name: QilinPrepare_10
       rect:
         serializedVersion: 2
         x: 1440
-        y: 1440
+        y: 1280
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe2c6d7b9cf765f4eb71a28532c4eacf
-      internalID: 1836408079
+      spriteID: a99842a04e319314e9cf644f24604397
+      internalID: 2044175074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_11
+      name: QilinPrepare_11
       rect:
         serializedVersion: 2
         x: 2160
-        y: 1440
+        y: 1280
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d94be2023e9075a4191c0457dee25b71
-      internalID: -1821886966
+      spriteID: df01258bd71a9f949bf13324d9d0f544
+      internalID: -558916204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 720
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1e3eb903c13ffd419c2b62e1cfc73e5
-      internalID: 908972364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_13
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 720
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 995054174d4d8b941bb4e835ad068598
-      internalID: 1499712678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_14
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 720
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc35a99174fb51c43be3f955257341ca
-      internalID: -1682140727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_15
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 720
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69566de1a029b8449ba456f9970849fb
-      internalID: -1273293600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_16
+      name: QilinPrepare_12
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8076918ac9c488e4ca8257c527ddbc98
-      internalID: 1520418394
+      spriteID: f2bd81dd5f3343b49945f07cb292cc70
+      internalID: 288682608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZhuQueFly_17
+      name: QilinPrepare_13
       rect:
         serializedVersion: 2
         x: 720
         y: 0
         width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 1280
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03f1bfa6ab786c84e90d78a22ae13b1d
-      internalID: 1646766734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_18
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48f270278513ac24e90664c2ff775248
-      internalID: 1808103685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZhuQueFly_19
-      rect:
-        serializedVersion: 2
-        x: 2160
-        y: 0
-        width: 720
-        height: 720
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ebcc495639ffc247924c7f51a4301eb
-      internalID: 1246564764
+      spriteID: b04794ed11631f0488851d3060a47a2c
+      internalID: -263146320
       vertices: []
       indices: 
       edges: []
@@ -527,26 +401,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZhuQueFly_0: 177472841
-      ZhuQueFly_1: 1894522060
-      ZhuQueFly_10: 1836408079
-      ZhuQueFly_11: -1821886966
-      ZhuQueFly_12: 908972364
-      ZhuQueFly_13: 1499712678
-      ZhuQueFly_14: -1682140727
-      ZhuQueFly_15: -1273293600
-      ZhuQueFly_16: 1520418394
-      ZhuQueFly_17: 1646766734
-      ZhuQueFly_18: 1808103685
-      ZhuQueFly_19: 1246564764
-      ZhuQueFly_2: -31496863
-      ZhuQueFly_3: 2085629700
-      ZhuQueFly_4: 178097872
-      ZhuQueFly_5: -430677749
-      ZhuQueFly_6: -888487315
-      ZhuQueFly_7: -1085287673
-      ZhuQueFly_8: -288249829
-      ZhuQueFly_9: -2082622226
+      QilinPrepare_0: 381945010
+      QilinPrepare_1: -1324855836
+      QilinPrepare_10: 2044175074
+      QilinPrepare_11: -558916204
+      QilinPrepare_12: 288682608
+      QilinPrepare_13: -263146320
+      QilinPrepare_2: -2017796617
+      QilinPrepare_3: 930216176
+      QilinPrepare_4: -1226553396
+      QilinPrepare_5: -1602013012
+      QilinPrepare_6: 2091707469
+      QilinPrepare_7: -473545629
+      QilinPrepare_8: 1152661582
+      QilinPrepare_9: 707778888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

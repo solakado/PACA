@@ -12,9 +12,19 @@ public class BossFireControl : MonoBehaviour
     public float chaseDistance = 5f;     // 开始追击
     public float attackDistance = 2f;    // 下砸范围
     public float fireDistance = 6f;
+    public float detectDistance = 10f;   // 最远攻击距离
+
 
     [Header("移动")]
     public float moveSpeed = 2f;
+
+    [Header("冲刺")]
+    public float dashSpeed = 10f;
+    public float dashTime = 0.8f;
+
+    private bool isDashing = false;
+    private float dashTimer;
+    private Vector2 dashDir;
 
     [Header("冷却时间")]
     public float fireCooldown = 2f;
@@ -37,9 +47,27 @@ public class BossFireControl : MonoBehaviour
     void Update()
     {
         if (player == null || centerPoint == null) return;
+        //if (isAttacking)
+        //{
+        //    anim.SetBool("isRun", false);
+        //    return;
+        //}
         if (isAttacking)
         {
             anim.SetBool("isRun", false);
+
+            if (isDashing)
+            {
+                transform.Translate(dashDir * dashSpeed * Time.deltaTime);
+
+                dashTimer -= Time.deltaTime;
+
+                if (dashTimer <= 0)
+                {
+                    EndDash();
+                }
+            }
+
             return;
         }
 
@@ -54,18 +82,49 @@ public class BossFireControl : MonoBehaviour
         attackTimer -= Time.deltaTime;
 
         // 超出距离 → 远程攻击
-        if (distance > fireDistance)
+        //if (distance > fireDistance)
+        //{
+        //    anim.SetBool("isRun", false);
+        //    isRun = false;
+        //    if (fireTimer <= 0)
+        //    {
+        //        isAttacking = true;
+        //        anim.SetTrigger("FireTrigger");
+        //        fireTimer = fireCooldown;
+
+        //    }
+        //}
+        if (distance > fireDistance && distance <= detectDistance)
         {
             anim.SetBool("isRun", false);
-            isRun = false;
+
             if (fireTimer <= 0)
             {
                 isAttacking = true;
-                anim.SetTrigger("FireTrigger");
-                fireTimer = fireCooldown;
 
+                int rand = Random.Range(0, 100);
+
+                if (rand < 50)
+                {
+                    anim.SetTrigger("FireTrigger");
+                }
+                else
+                {
+                    anim.SetTrigger("DashReadyTrigger");
+                }
+
+                fireTimer = fireCooldown;
             }
+
+            return;
         }
+
+        if (distance > detectDistance)
+        {
+            anim.SetBool("isRun", false);
+            return;
+        }
+
         if (distance <= attackDistance)
         {
             anim.SetBool("isRun", false);
@@ -153,28 +212,76 @@ public class BossFireControl : MonoBehaviour
             fb.GetComponent<Fireball>().sr.flipX = true;    
         }
     }
+
+    public void StartDash()
+    {
+        isDashing = true;
+
+        dashDir = (player.position - transform.position).normalized;
+        dashDir.y = 0;
+        dashDir.Normalize();
+
+        dashTimer = dashTime;
+
+        anim.SetBool("isDash", true);
+    }
+    void EndDash()
+    {
+        isDashing = false;
+        isAttacking = false;
+
+        anim.SetBool("isDash", false);
+    }
+    //public void EndAttack()
+    //{
+    //    isAttacking = false;
+    //}
     public void EndAttack()
     {
-        isAttacking = false;
+        if (!isDashing)
+            isAttacking = false;
     }
 
     // ================= 可视化 =================
+    //void OnDrawGizmosSelected()
+    //{
+    //    if (centerPoint == null) return;
+
+    //    Gizmos.color = Color.red;
+    //    Gizmos.DrawWireSphere(centerPoint.position, attackDistance);
+    //    // 攻击范围（从身体中心）
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(centerPoint.position, fireDistance);
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(centerPoint.position, chaseDistance);
+
+    //    // 指向玩家
+    //    if (player != null)
+    //    {
+    //        Gizmos.color = Color.red;
+    //        Gizmos.DrawLine(centerPoint.position, player.position);
+    //    }
+    //}
     void OnDrawGizmosSelected()
     {
         if (centerPoint == null) return;
 
+        // 近战范围（下砸）
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(centerPoint.position, attackDistance);
-        // 攻击范围（从身体中心）
-        Gizmos.color = Color.yellow;
+
+        // 追击范围
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(centerPoint.position, fireDistance);
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(centerPoint.position, chaseDistance);
+
+        // 随机技能范围（新增）
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(centerPoint.position, detectDistance);
 
         // 指向玩家
         if (player != null)
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.white;
             Gizmos.DrawLine(centerPoint.position, player.position);
         }
     }
