@@ -10,7 +10,7 @@ public class SwordArray : MonoBehaviour
 
         //Debug.Log("碰到" + other.name);
         // 碰到玩家 或 非Boss物体时销毁
-        if (other.CompareTag("Player")|| other.CompareTag("isGround"))
+        if (other.CompareTag("isGround"))
         {
             Destroy(gameObject);
         }
