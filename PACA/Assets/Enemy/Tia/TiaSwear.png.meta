@@ -1,0 +1,532 @@
+fileFormatVersion: 2
+guid: 35a754e68f5f57946821c5e73d9c0c8c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 122
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TiaSwear_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1909a75cde9319945a63e154e1bfd875
+      internalID: 154387535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0992db43227b8884794764a2dd149f9e
+      internalID: -1041934620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b628325e21005448ec5862a00437c5
+      internalID: 1735201850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2880
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa8d5cce51401345befa553cf3e5bbb
+      internalID: -1688999991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c7531d06f50c74a84cb9e8aa690dca
+      internalID: 1715657306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11bab31f8d21f77409bc6f0404e38b7a
+      internalID: -865465251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174c0ecb37150d54bbbeeecb28ef1b3e
+      internalID: 83161835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2160
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdb0dd520628b84f9fef8de4dd7901c
+      internalID: -47112088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1782380a9d8f5b49935c680f6ec368e
+      internalID: -1055647511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5256d84c4a1842043a8e3ceb0b4ed760
+      internalID: -1802999798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baecaf51d74ee07478b6bd250599675b
+      internalID: 312615961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_11
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1440
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb798cf4077b3a14a8fc6757b409adbe
+      internalID: 931532997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3b33559b1d4b74a868cdbf457f5aba
+      internalID: -234639035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667e1f101974204479f231f6dc0f7be5
+      internalID: 2009430937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ae5347d87029145b3e179cf33e600d
+      internalID: 1909155550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_15
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 720
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696480304a244d14caa20766aa4c5889
+      internalID: 1309882476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bc81196855de449bff6baa6b5c9ad1
+      internalID: -691615371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e526d01f8776d4a87f508f0fbbb34f
+      internalID: -1970729869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaSwear_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 720
+        height: 720
+      alignment: 9
+      pivot: {x: 0.48, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c5040ad52203c42a6fc80a4d8fc17b
+      internalID: 580485517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TiaSwear_0: 154387535
+      TiaSwear_1: -1041934620
+      TiaSwear_10: 312615961
+      TiaSwear_11: 931532997
+      TiaSwear_12: -234639035
+      TiaSwear_13: 2009430937
+      TiaSwear_14: 1909155550
+      TiaSwear_15: 1309882476
+      TiaSwear_16: -691615371
+      TiaSwear_17: -1970729869
+      TiaSwear_18: 580485517
+      TiaSwear_2: 1735201850
+      TiaSwear_3: -1688999991
+      TiaSwear_4: 1715657306
+      TiaSwear_5: -865465251
+      TiaSwear_6: 83161835
+      TiaSwear_7: -47112088
+      TiaSwear_8: -1055647511
+      TiaSwear_9: -1802999798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

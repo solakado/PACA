@@ -1,0 +1,686 @@
+fileFormatVersion: 2
+guid: 14b125158f080004baf80503874e3687
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 118
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TiaExculibar_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7680
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f5a9e9d99515548ae9e62134aa1b74
+      internalID: 30998636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 7680
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658acea64f131d9468074d852ce3cc3b
+      internalID: 658997270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 7680
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c9d928e6db5e6d4d83424c69c44942c
+      internalID: -1013842439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 7680
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e28b7b1198f5c40add04b0a0deb1d7
+      internalID: -1185967732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f32c06c009c8840b89e4949b8bb032
+      internalID: 411241725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 6400
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa7122cb2ccc8f40a3ad3b43a1f58c9
+      internalID: -1113829835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6400
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3617568384f5b4895778cd5902b584
+      internalID: 1936764062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6400
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da3301310eecdd408aacb6cdb518db7
+      internalID: -522554981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5120
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d0c096dee063c4693fe5f6a31ff8f3
+      internalID: 1152037780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 5120
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f09d50d947249a478a5f51621957a23
+      internalID: 688677803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5120
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba391c869c12bc428a575fa31a1c20b
+      internalID: -1902620327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_11
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5120
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c477827c7b09ab04bacdf812a08b692b
+      internalID: -922073474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3840
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c62dbe8004818c4da8d10e1a959c991
+      internalID: 250663120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_13
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3840
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbc57f474a694649b7c69741735fd9f
+      internalID: -506902565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_14
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3840
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119ddfe583db5c64e97aa16f393ef7e8
+      internalID: -488964832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_15
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3840
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00d74850dc4ce64faa47308e23393d8
+      internalID: 134585891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d50eb64b1e1ec41b57e669a1a8680d
+      internalID: -383195568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 2560
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd867a22b9507d468cfa337cd7372c7
+      internalID: -1894901303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2560
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791579e4173bb384ebe9216d63b78309
+      internalID: 52410890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_19
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2560
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b365fb0a04d76545a25e8283d8f5694
+      internalID: 804474384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdb3448a8c76a34386798c303109727
+      internalID: 1783990539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1280
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a32915bd7becce47a61769908a94a4a
+      internalID: -1355434786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_22
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1280
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026877192a2535349b24fe07c9c4b9d4
+      internalID: 213384795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_23
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1280
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123475064be61dc419546a644337e7e4
+      internalID: 1439743984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769431a1086ca7841a790365eed953aa
+      internalID: -2135908440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaExculibar_25
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 720
+        height: 1280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0457ead237e7d44a8eeec5945a5282
+      internalID: 1286906244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TiaExculibar_0: 30998636
+      TiaExculibar_1: 658997270
+      TiaExculibar_10: -1902620327
+      TiaExculibar_11: -922073474
+      TiaExculibar_12: 250663120
+      TiaExculibar_13: -506902565
+      TiaExculibar_14: -488964832
+      TiaExculibar_15: 134585891
+      TiaExculibar_16: -383195568
+      TiaExculibar_17: -1894901303
+      TiaExculibar_18: 52410890
+      TiaExculibar_19: 804474384
+      TiaExculibar_2: -1013842439
+      TiaExculibar_20: 1783990539
+      TiaExculibar_21: -1355434786
+      TiaExculibar_22: 213384795
+      TiaExculibar_23: 1439743984
+      TiaExculibar_24: -2135908440
+      TiaExculibar_25: 1286906244
+      TiaExculibar_3: -1185967732
+      TiaExculibar_4: 411241725
+      TiaExculibar_5: -1113829835
+      TiaExculibar_6: 1936764062
+      TiaExculibar_7: -522554981
+      TiaExculibar_8: 1152037780
+      TiaExculibar_9: 688677803
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

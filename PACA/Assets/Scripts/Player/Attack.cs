@@ -30,6 +30,7 @@ public class Attack : MonoBehaviour
             XuanWuController xuanwu = other.GetComponentInParent<XuanWuController>();
             ZhuQueController zhuque = other.GetComponentInParent<ZhuQueController>();
             BaiHuController baihu = other.GetComponentInParent<BaiHuController>();
+            TiaController tia = other.GetComponentInParent<TiaController>();
             if (boss !=null)
             {
                 boss.TakeDamage(damage);
@@ -45,6 +46,10 @@ public class Attack : MonoBehaviour
             if (baihu != null)
             {
                 baihu.TakeDamage(damage);
+            }
+            if (tia != null)
+            {
+                tia.TakeDamage(damage);
             }
             //Debug.Log("成功获取BossController");
             hasHit = true;
