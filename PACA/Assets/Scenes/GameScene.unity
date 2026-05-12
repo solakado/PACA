@@ -581,7 +581,7 @@ MonoBehaviour:
   centerPoint: {fileID: 110662146}
   detectDistance: 25
   rangedDistance: 18.8
-  meleeDistance: 6.01
+  meleeDistance: 7.03
   moveSpeed: 4
   dashSpeed: 15
   dashTime: 0.8
@@ -939,7 +939,7 @@ Transform:
   m_GameObject: {fileID: 423343965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.31, y: 4.44, z: 0}
+  m_LocalPosition: {x: -5.31, y: 6.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1441,7 +1441,7 @@ Transform:
   m_GameObject: {fileID: 1350325813}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.31, y: 4.44, z: 0}
+  m_LocalPosition: {x: 5.31, y: 6.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
