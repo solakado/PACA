@@ -30,6 +30,8 @@ public class TiaAttack : MonoBehaviour
     public GameObject swordArrayPrefab;
     public Transform swordArrayPoint1;
     public Transform swordArrayPoint2;
+    public GameObject EnergyWeaponPrefab;
+    public Transform EnergyWeaponPoint;
     private Animator anim;
     private bool isAttacking;
     private bool isRun;
@@ -199,7 +201,36 @@ public class TiaAttack : MonoBehaviour
         //    fb.GetComponent<SwordAura>().sr.flipX = true;
         //}
     }
-    
+
+    public void SpawnEnergyWeapon()
+    {
+        if (EnergyWeaponPrefab == null || EnergyWeaponPoint == null)
+        {
+            Debug.LogWarning("EnergyWeaponPrefab 或EnergyWeaponPoint 没设置！");
+            return;
+        }
+
+
+
+        GameObject fb = Instantiate(EnergyWeaponPrefab, EnergyWeaponPoint.position, Quaternion.identity);
+        //GameObject fb2 = Instantiate(swordArrayPrefab, swordArrayPoint2.position, Quaternion.identity);
+        float dir = transform.localScale.x > 0 ? 1 : -1;
+
+        if (dir > 0)
+        {
+            fb.GetComponent<EnergyWeapon>().sr.flipX = true;
+        }
+
+        //// 注意：你默认朝左，这里方向要反！
+        //float dir = transform.localScale.x > 0 ? 1 : -1;
+
+        //fb.GetComponent<SwordAura>()?.Setup(new Vector2(dir, 0));
+        //if (dir > 0)
+        //{
+        //    fb.GetComponent<SwordAura>().sr.flipX = true;
+        //}
+    }
+
 
     public void StartDashPreparation()
     {
