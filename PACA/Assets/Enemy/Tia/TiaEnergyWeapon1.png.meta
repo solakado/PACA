@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c8b4cd5cf9b01214dbbf3934b4a9a281
+guid: 65f62a27e5ed2bb4086a3435a5aed601
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 122
+  spritePixelsToUnits: 163
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -97,400 +97,421 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TiaTwoCombo_0
+      name: TiaEnergyWeapon1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 2880
+        y: 5120
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5eff8c99b4d4384d9ef94a0302b877d
-      internalID: 1720262868
+      spriteID: 6d785288a8b21514385988af279dc86f
+      internalID: 1156318185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_1
+      name: TiaEnergyWeapon1_1
       rect:
         serializedVersion: 2
         x: 720
-        y: 2880
+        y: 5120
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f817c9f3b4b4aa4495a901b77ae782b
-      internalID: -566891510
+      spriteID: c5b53e0fa429969418f1da54aa0a1231
+      internalID: -783806391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_2
+      name: TiaEnergyWeapon1_2
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2880
+        y: 5120
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d895259bb271304e9f8d32036173b94
-      internalID: -2018386234
+      spriteID: fde229f46af1bf340a7c0ba01796e028
+      internalID: 1645827948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_3
+      name: TiaEnergyWeapon1_3
       rect:
         serializedVersion: 2
         x: 2160
-        y: 2880
+        y: 5120
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8236324862e45c4c9eb743fe5a6676f
-      internalID: -1024876340
+      spriteID: c8a775e40aaf8f3419209c679d2c9980
+      internalID: -2098633696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_4
+      name: TiaEnergyWeapon1_4
       rect:
         serializedVersion: 2
         x: 0
-        y: 2160
+        y: 3840
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b893ad7e6e7a404592f205aa140bfb5
-      internalID: -1536548354
+      spriteID: bd06bb1df65c7c242a0bd4bb0568613d
+      internalID: 245283386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_5
+      name: TiaEnergyWeapon1_5
       rect:
         serializedVersion: 2
         x: 720
-        y: 2160
+        y: 3840
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29969aa78c0fb5c4785a5d322ed78af3
-      internalID: -2022325765
+      spriteID: 567845996d954c54088e3cfe93224e4f
+      internalID: 25304374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_6
+      name: TiaEnergyWeapon1_6
       rect:
         serializedVersion: 2
         x: 1440
-        y: 2160
+        y: 3840
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d5788c08d87d6e49b505957cfc43f89
-      internalID: 953063225
+      spriteID: 562621a3f849edc4784a3a49723c271e
+      internalID: -1094973894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_7
+      name: TiaEnergyWeapon1_7
       rect:
         serializedVersion: 2
         x: 2160
-        y: 2160
+        y: 3840
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f3aff16fbbd9834bb3305f9470ce146
-      internalID: 510963820
+      spriteID: 8ee4a35bb9c8f0d4f9ffbdb7061b239e
+      internalID: 962234728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_8
+      name: TiaEnergyWeapon1_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 1440
+        y: 2560
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8df89cb5a6d64604cadba7f3ad4e532f
-      internalID: -1975398700
+      spriteID: dbdf1f4eb79e0864db5c9cb5b2675bd1
+      internalID: -88260816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_9
+      name: TiaEnergyWeapon1_9
       rect:
         serializedVersion: 2
         x: 720
-        y: 1440
+        y: 2560
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f54f08f20179266438e7ede555667b1e
-      internalID: -1008245183
+      spriteID: d3f79a286bcef1841a316589bd71e8d3
+      internalID: 1399793537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_10
+      name: TiaEnergyWeapon1_10
       rect:
         serializedVersion: 2
         x: 1440
-        y: 1440
+        y: 2560
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bf5f0f4dce3e2e41856b806cfcd0b2f
-      internalID: -793320053
+      spriteID: e64c7a4c42c6c084c8d388fa08beb6c7
+      internalID: 624082254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_11
+      name: TiaEnergyWeapon1_11
       rect:
         serializedVersion: 2
         x: 2160
-        y: 1440
+        y: 2560
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f24bbd129471149a0ea6f93f96ae11
-      internalID: 890870323
+      spriteID: 61dc6dfc63e6d1d41bb9d4ef8c2132cc
+      internalID: -1872920531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_12
+      name: TiaEnergyWeapon1_12
       rect:
         serializedVersion: 2
         x: 0
-        y: 720
+        y: 1280
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd4fe16994ff6d34f90df72a031d7128
-      internalID: -752681383
+      spriteID: 290a379d2d8daf943b6dc413f9903616
+      internalID: 1695258864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_13
+      name: TiaEnergyWeapon1_13
       rect:
         serializedVersion: 2
         x: 720
-        y: 720
+        y: 1280
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bb83a608bdc5b846a51b941ba96ff5a
-      internalID: -143109097
+      spriteID: 0826b035aedeb2446bb03d6918826c5b
+      internalID: 802840133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_14
+      name: TiaEnergyWeapon1_14
       rect:
         serializedVersion: 2
         x: 1440
-        y: 720
+        y: 1280
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 201ed3e28eaa97b4392065f3376a8759
-      internalID: -1627522570
+      spriteID: 3ca0f696461084646bba3f81ae81027b
+      internalID: 970663095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_15
+      name: TiaEnergyWeapon1_15
       rect:
         serializedVersion: 2
         x: 2160
-        y: 720
+        y: 1280
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 574f14ccf3481184b8036c124a29b993
-      internalID: -1815503747
+      spriteID: e3ab82743fcad8642b383cb4e84abbe7
+      internalID: 1741017993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_16
+      name: TiaEnergyWeapon1_16
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d22dd7d24a444de459c32d8708b42a5a
-      internalID: -821703060
+      spriteID: ed1cf116bb59faa4395c5897dd362896
+      internalID: 694661535
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_17
+      name: TiaEnergyWeapon1_17
       rect:
         serializedVersion: 2
         x: 720
         y: 0
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a4dca6897ca587418f1aede53216fa1
-      internalID: 1762029981
+      spriteID: f4eae8cde18f3da4a97c1bb601b3ce59
+      internalID: 1004394263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TiaTwoCombo_18
+      name: TiaEnergyWeapon1_18
       rect:
         serializedVersion: 2
         x: 1440
         y: 0
         width: 720
-        height: 720
+        height: 1280
       alignment: 9
-      pivot: {x: 0.48, y: 0.5}
+      pivot: {x: 0.47, y: 0.455}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4b2c85e4a008834e9cec2fe8482173c
-      internalID: 1387625411
+      spriteID: d3590cb58260e1549bd9b199587db0ee
+      internalID: 1891546737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TiaEnergyWeapon1_19
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 720
+        height: 1280
+      alignment: 9
+      pivot: {x: 0.47, y: 0.455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9b5afe9a76e534983ce249c95f7e36
+      internalID: 937753189
       vertices: []
       indices: 
       edges: []
@@ -506,26 +527,26 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TiaTwoCombo_0: 1720262868
-      TiaTwoCombo_1: -566891510
-      TiaTwoCombo_10: -793320053
-      TiaTwoCombo_11: 890870323
-      TiaTwoCombo_12: -752681383
-      TiaTwoCombo_13: -143109097
-      TiaTwoCombo_14: -1627522570
-      TiaTwoCombo_15: -1815503747
-      TiaTwoCombo_16: -821703060
-      TiaTwoCombo_17: 1762029981
-      TiaTwoCombo_18: 1387625411
-      TiaTwoCombo_19: 763725253
-      TiaTwoCombo_2: -2018386234
-      TiaTwoCombo_3: -1024876340
-      TiaTwoCombo_4: -1536548354
-      TiaTwoCombo_5: -2022325765
-      TiaTwoCombo_6: 953063225
-      TiaTwoCombo_7: 510963820
-      TiaTwoCombo_8: -1975398700
-      TiaTwoCombo_9: -1008245183
+      TiaEnergyWeapon1_0: 1156318185
+      TiaEnergyWeapon1_1: -783806391
+      TiaEnergyWeapon1_10: 624082254
+      TiaEnergyWeapon1_11: -1872920531
+      TiaEnergyWeapon1_12: 1695258864
+      TiaEnergyWeapon1_13: 802840133
+      TiaEnergyWeapon1_14: 970663095
+      TiaEnergyWeapon1_15: 1741017993
+      TiaEnergyWeapon1_16: 694661535
+      TiaEnergyWeapon1_17: 1004394263
+      TiaEnergyWeapon1_18: 1891546737
+      TiaEnergyWeapon1_19: 937753189
+      TiaEnergyWeapon1_2: 1645827948
+      TiaEnergyWeapon1_3: -2098633696
+      TiaEnergyWeapon1_4: 245283386
+      TiaEnergyWeapon1_5: 25304374
+      TiaEnergyWeapon1_6: -1094973894
+      TiaEnergyWeapon1_7: 962234728
+      TiaEnergyWeapon1_8: -88260816
+      TiaEnergyWeapon1_9: 1399793537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
