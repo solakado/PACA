@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private CapsuleCollider2D coll;
     public Rigidbody2D rb;
     public Vector2 inputDirection;
+    private float originalGravityScale;
 
     [Header("基本参数")]
     public float speed;
@@ -52,6 +53,7 @@ public class PlayerController : MonoBehaviour
         baseScaleX = Mathf.Abs(transform.localScale.x);
         baseScaleY = transform.localScale.y;
         baseScaleZ = transform.localScale.z;
+        originalGravityScale = rb.gravityScale;
     }
 
     private void OnEnable()
@@ -163,7 +165,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashTime);
         health.isInvincible = false;
         isDashing = false;
-        rb.gravityScale = 3.5f;
+        rb.gravityScale = originalGravityScale;
 
         physicsCheck.isDashing = false;
 
